@@ -30,6 +30,14 @@ function createMenu(div) {
   div.appendChild(menu);
 }
 
+function createIMGCover(div) {
+  const text = document.createElement("p");
+  text.id = "Home-cover";
+  text.innerHTML =
+    "Come enjoy our healthy meals! We have a wide selection to choose from so please choose wisely";
+  div.appendChild(text);
+}
+
 function createFooter(div) {
   const filler = document.createElement("div");
   filler.id = "filler";
@@ -44,6 +52,7 @@ function createFooter(div) {
 function compile(div) {
   createTitle(div);
   createMenu(div);
+  createIMGCover(div);
   createFooter(div);
 }
 

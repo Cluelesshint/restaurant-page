@@ -42,6 +42,14 @@ function createMenu(div) {
   div.appendChild(menu);
 }
 
+function createIMGCover(div) {
+  const text = document.createElement("p");
+  text.id = "Home-cover";
+  text.innerHTML =
+    "Come enjoy our healthy meals! We have a wide selection to choose from so please choose wisely";
+  div.appendChild(text);
+}
+
 function createFooter(div) {
   const filler = document.createElement("div");
   filler.id = "filler";
@@ -56,6 +64,7 @@ function createFooter(div) {
 function compile(div) {
   createTitle(div);
   createMenu(div);
+  createIMGCover(div);
   createFooter(div);
 }
 
@@ -422,7 +431,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  height: 100vh;\n  width: 100vw;\n  margin: 0;\n  padding: 0;\n  overflow: scroll;\n  display: flex;\n  flex-shrink: 0;\n}\n\n#content {\n  height: 100vh;\n  width: 100vw;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: 50% 25%;\n}\n\n#title {\n  height: 5vh;\n  width: auto;\n  background-color: grey;\n  margin: 0;\n  font-size: 36px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#menu {\n  height: 60px;\n  width: auto;\n  background-color: grey;\n  gap: 100px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n#menu button {\n  height: 30px;\n}\n\n#filler {\n  padding-top: 100px;\n  position: fixed;\n  bottom: 20%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n}\n\n.fillerOne {\n  font-size: 26px;\n  font-weight: 900;\n  margin: 0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  height: 100vh;\n  width: 100vw;\n  margin: 0;\n  padding: 0;\n  overflow: scroll;\n  display: flex;\n  flex-shrink: 0;\n}\n\n#content {\n  height: 100vh;\n  width: 100vw;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: 50% 25%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n#title {\n  height: 5vh;\n  width: 100vw;\n  background-color: grey;\n  margin: 0;\n  font-size: 36px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#menu {\n  height: 60px;\n  width: 100vw;\n  background-color: grey;\n  gap: 100px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n#menu button {\n  height: 30px;\n}\n\n#Home-cover {\n  height: 200px;\n  width: 470px;\n  font-size: 36px;\n  margin-top: 175px;\n  background-color: black;\n  background: rgba(204, 204, 204, 0.7);\n}\n\n#filler {\n  padding-top: 100px;\n  position: fixed;\n  bottom: 20%;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n}\n\n.fillerOne {\n  font-size: 26px;\n  font-weight: 900;\n  margin: 0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

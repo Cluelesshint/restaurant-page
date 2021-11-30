@@ -14,11 +14,14 @@ body {
   background: url("./img/homeIMG.jpeg");
   background-repeat: no-repeat;
   background-position: 50% 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #title {
   height: 5vh;
-  width: auto;
+  width: 100vw;
   background-color: grey;
   margin: 0;
   font-size: 36px;
@@ -29,7 +32,7 @@ body {
 
 #menu {
   height: 60px;
-  width: auto;
+  width: 100vw;
   background-color: grey;
   gap: 100px;
   display: flex;
@@ -39,6 +42,15 @@ body {
 
 #menu button {
   height: 30px;
+}
+
+#Home-cover {
+  height: 200px;
+  width: 470px;
+  font-size: 36px;
+  margin-top: 175px;
+  background-color: black;
+  background: rgba(204, 204, 204, 0.7);
 }
 
 #filler {
