@@ -9,6 +9,9 @@ body {
   height: 100vh;
   width: 100vw;
   background: url("./img/homeIMG.jpeg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 #menu {
