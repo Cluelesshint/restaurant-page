@@ -1,3 +1,5 @@
+import Icon from "./img/homeIMG.jpeg";
+
 function createButton(info, iden) {
   const button = document.createElement("button");
   button.innerHTML = info;
