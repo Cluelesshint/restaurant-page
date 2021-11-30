@@ -42,7 +42,7 @@ function createMenu(div) {
   div.appendChild(menu);
 }
 
-function createFiller(div) {
+function createFooter(div) {
   const filler = document.createElement("div");
   filler.id = "filler";
   const fill = document.createElement("h3");
@@ -53,13 +53,10 @@ function createFiller(div) {
   div.appendChild(filler);
 }
 
-function createFooter() {}
-
 function compile(div) {
   createTitle(div);
   createMenu(div);
-  createFiller(div);
-  createFooter();
+  createFooter(div);
 }
 
 
