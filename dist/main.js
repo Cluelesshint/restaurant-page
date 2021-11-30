@@ -19,6 +19,13 @@ function createButton(info, iden) {
   return button;
 }
 
+function createTitle(div) {
+  const title = document.createElement("div");
+  title.id = "title";
+  title.innerHTML = `Bob's Lounge!`;
+  div.appendChild(title);
+}
+
 function createMenu(div) {
   const menu = document.createElement("div");
   menu.id = "menu";
@@ -33,6 +40,7 @@ function createFiller() {}
 function createFooter() {}
 
 function compile(div) {
+  createTitle(div);
   createMenu(div);
   createFiller();
   createFooter();
@@ -401,7 +409,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  height: 100vh;\n  width: 100vw;\n  margin: 0;\n  padding: 0;\n}\n\n#content {\n  height: 100vh;\n  width: 100vw;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position-x: center;\n  background-position-y: center;\n}\n\n#menu {\n  height: 30px;\n  width: auto;\n  gap: 100px;\n  padding-top: 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n#menu button {\n  height: 30px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  height: 100vh;\n  width: 100vw;\n  margin: 0;\n  padding: 0;\n}\n\n#content {\n  height: 100vh;\n  width: 100vw;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position-x: center;\n  background-position-y: center;\n}\n\n#title {\n  height: 10vh;\n  width: auto;\n  font-size: 36px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#menu {\n  height: 30px;\n  width: auto;\n  gap: 100px;\n  padding-top: 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n#menu button {\n  height: 30px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

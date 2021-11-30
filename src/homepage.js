@@ -7,6 +7,13 @@ function createButton(info, iden) {
   return button;
 }
 
+function createTitle(div) {
+  const title = document.createElement("div");
+  title.id = "title";
+  title.innerHTML = `Bob's Lounge!`;
+  div.appendChild(title);
+}
+
 function createMenu(div) {
   const menu = document.createElement("div");
   menu.id = "menu";
@@ -21,6 +28,7 @@ function createFiller() {}
 function createFooter() {}
 
 function compile(div) {
+  createTitle(div);
   createMenu(div);
   createFiller();
   createFooter();
