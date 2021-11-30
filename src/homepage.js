@@ -33,8 +33,7 @@ function createMenu(div) {
 function createIMGCover(div) {
   const text = document.createElement("p");
   text.id = "Home-cover";
-  text.innerHTML =
-    "Come enjoy our healthy meals! We have a wide selection to choose from so please choose wisely";
+  text.innerHTML = "Come on in, we don't bite ;)";
   div.appendChild(text);
 }
 

@@ -51,12 +51,12 @@ body {
 }
 
 #Home-cover {
-  height: 200px;
-  width: 470px;
+  height: 45px;
+  width: 410px;
   font-size: 36px;
   margin-top: 175px;
   background-color: black;
-  background: rgba(204, 204, 204, 0.7);
+  background: rgba(204, 204, 204, 0.85);
 }
 
 #filler {
