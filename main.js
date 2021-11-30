@@ -54,8 +54,7 @@ function createFooter(div) {
   const filler = document.createElement("div");
   filler.id = "filler";
   const fill = document.createElement("h3");
-  fill.innerHTML =
-    "Please enjoy our healthy meals!  We have a wide selection to choose so please choose wisely";
+  fill.innerHTML = "For real, enjoy these meals. Copyright 2021";
   fill.classList.add("fillerOne");
   filler.appendChild(fill);
   div.appendChild(filler);
