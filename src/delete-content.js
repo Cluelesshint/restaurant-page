@@ -1,7 +1,8 @@
-function deleteAllContent(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
+function deleteContent() {
+  const bigContent = document.getElementById("big-content");
+  const foot = document.querySelector(".footer");
+  const head = document.getElementById("grab");
+  bigContent.remove();
+  foot.remove();
 }
-
-export { deleteAllContent };
+export { deleteContent };
