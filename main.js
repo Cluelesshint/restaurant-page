@@ -9,7 +9,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "compileHome": () => (/* binding */ compileHome),
 /* harmony export */   "createHeader": () => (/* binding */ createHeader),
-/* harmony export */   "createFooter": () => (/* binding */ createFooter)
+/* harmony export */   "createFooter": () => (/* binding */ createFooter),
+/* harmony export */   "createBigContent": () => (/* binding */ createBigContent)
 /* harmony export */ });
 /* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
@@ -67,9 +68,10 @@ function createFooter() {
   return footer;
 }
 
-function compileHome() {
+function compileHome(content1) {
   const content = document.createElement("div");
-  content.appendChild(createHeader());
+  content.id = "grab";
+  content1.appendChild(createHeader());
   content.appendChild(createBigContent());
   content.appendChild(createFooter());
   return content;
@@ -98,8 +100,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _img_pizza_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
 /* harmony import */ var _img_alcoholic_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 /* harmony import */ var _img_coffee_mug_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
-/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1);
-
 
 
 
@@ -123,7 +123,7 @@ function cardMaker(name, price, clas, image) {
   return card;
 }
 
-function createMenu(div) {
+function createMenu() {
   const content = document.createElement("div");
   content.id = "big-content";
   const menuPage = document.createElement("div");
@@ -141,13 +141,13 @@ function createMenu(div) {
   menuPage.appendChild(cardPizza);
   menuPage.appendChild(cardAlcohol);
   menuPage.appendChild(cardCoffee);
-  div.appendChild(content);
+  return content;
 }
 
-function compileMenu(div) {
-  (0,_homepage__WEBPACK_IMPORTED_MODULE_6__.createHeader)(div);
-  createMenu(div);
-  (0,_homepage__WEBPACK_IMPORTED_MODULE_6__.createFooter)(div);
+function compileMenu() {
+  const content = document.createElement("div");
+  content.appendChild(createMenu());
+  return content;
 }
 
 
@@ -839,8 +839,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const pageContent = document.querySelector("#content");
-
-let homepageContent = (0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.compileHome)();
+let homepageContent = (0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.compileHome)(pageContent);
 pageContent.appendChild(homepageContent);
 
 let navLinks = document.querySelectorAll("button");
@@ -850,10 +849,33 @@ let menuLink = navLinks[1];
 let aboutUsLink = navLinks[2];
 
 homepageLink.addEventListener("click", () => {
-  (0,_delete_content_js__WEBPACK_IMPORTED_MODULE_2__.deleteAllContent)(pageContent);
-  let homepage = (0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.compileHome)();
-  pageContent.appendChild(homepage);
-  console.log("hey");
+  const bigContent = document.getElementById("big-content");
+  const foot = document.querySelector(".footer");
+  const head = document.getElementById("grab");
+  bigContent.remove();
+  foot.remove();
+  let homepage = (0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createBigContent)();
+  head.appendChild(homepage);
+  head.appendChild((0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
+  console.log("home");
+  console.log(bigContent);
+  console.log(head);
+});
+
+menuLink.addEventListener("click", () => {
+  const bigContent = document.getElementById("big-content");
+  const foot = document.querySelector(".footer");
+  const head = document.getElementById("grab");
+  bigContent.remove();
+  foot.remove();
+  let menuPage = (0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.compileMenu)();
+  head.appendChild(menuPage);
+  head.appendChild((0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
+  console.log("menu");
+});
+
+aboutUsLink.addEventListener("click", () => {
+  console.log("about");
 });
 
 })();
