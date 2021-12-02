@@ -4,7 +4,6 @@ import hotdog from "./img/fast-food.png";
 import pizza from "./img/pizza.png";
 import alcohol from "./img/alcoholic.png";
 import coffee from "./img/coffee-mug.png";
-import { createHeader, createFooter } from "./homepage";
 
 function cardMaker(name, price, clas, image) {
   const card = document.createElement("div");
@@ -22,7 +21,7 @@ function cardMaker(name, price, clas, image) {
   return card;
 }
 
-function createMenu(div) {
+function createMenu() {
   const content = document.createElement("div");
   content.id = "big-content";
   const menuPage = document.createElement("div");
@@ -40,13 +39,13 @@ function createMenu(div) {
   menuPage.appendChild(cardPizza);
   menuPage.appendChild(cardAlcohol);
   menuPage.appendChild(cardCoffee);
-  div.appendChild(content);
+  return content;
 }
 
-function compileMenu(div) {
-  createHeader(div);
-  createMenu(div);
-  createFooter(div);
+function compileMenu() {
+  const content = document.createElement("div");
+  content.appendChild(createMenu());
+  return content;
 }
 
 export { compileMenu };

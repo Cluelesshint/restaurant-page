@@ -1,6 +1,6 @@
 import Icon from "./img/logo.png";
 
-function createHeader(div) {
+function createHeader() {
   const header = document.createElement("header");
   header.id = "header";
   const logo = new Image();
@@ -12,7 +12,7 @@ function createHeader(div) {
   header.appendChild(logo);
   header.appendChild(title);
   header.appendChild(nav);
-  div.appendChild(header);
+  return header;
 }
 
 function createButton(iden, text) {
@@ -35,28 +35,31 @@ function createNav() {
   return nav.appendChild(ul);
 }
 
-function createBigContent(div) {
+function createBigContent() {
   const big = document.createElement("div");
   big.id = "big-content";
   const content = document.createElement("div");
   content.classList.add("content1");
   big.appendChild(content);
-  div.appendChild(big);
+  return big;
 }
 
-function createFooter(div) {
+function createFooter() {
   const footer = document.createElement("footer");
   footer.classList.add("footer");
   const para = document.createElement("p");
   para.innerHTML = "Enjoy these delicious food items COPYRIGHT 2021";
   footer.appendChild(para);
-  div.appendChild(footer);
+  return footer;
 }
 
-function compileHome(div) {
-  createHeader(div);
-  createBigContent(div);
-  createFooter(div);
+function compileHome(content1) {
+  const content = document.createElement("div");
+  content.id = "grab";
+  content1.appendChild(createHeader());
+  content.appendChild(createBigContent());
+  content.appendChild(createFooter());
+  return content;
 }
 
-export { compileHome, createHeader, createFooter };
+export { compileHome, createHeader, createFooter, createBigContent };
