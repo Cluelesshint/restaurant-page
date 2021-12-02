@@ -53,10 +53,10 @@ function createFooter(div) {
   div.appendChild(footer);
 }
 
-function compile(div) {
+function compileHome(div) {
   createHeader(div);
   createBigContent(div);
   createFooter(div);
 }
 
-export { compile };
+export { compileHome, createHeader, createFooter };
