@@ -21,7 +21,7 @@ function cardMaker(name, price, clas, image) {
   return card;
 }
 
-function createMenu() {
+function compileMenu() {
   const content = document.createElement("div");
   content.id = "big-content";
   const menuPage = document.createElement("div");
@@ -39,12 +39,6 @@ function createMenu() {
   menuPage.appendChild(cardPizza);
   menuPage.appendChild(cardAlcohol);
   menuPage.appendChild(cardCoffee);
-  return content;
-}
-
-function compileMenu() {
-  const content = document.createElement("div");
-  content.appendChild(createMenu());
   return content;
 }
 

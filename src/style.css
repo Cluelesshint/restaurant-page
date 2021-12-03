@@ -93,3 +93,12 @@ button:hover {
 .food {
   margin-top: 25px;
 }
+
+.about-info {
+  height: 500px;
+  width: 700px;
+}
+
+.para-ab {
+  font-size: 36px;
+}

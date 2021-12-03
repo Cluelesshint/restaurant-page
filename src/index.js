@@ -1,5 +1,6 @@
 import { compileHome, createBigContent, createFooter } from "./homepage.js";
 import { compileMenu } from "./menu.js";
+import { compileAbout } from "./about.js";
 import { deleteContent } from "./delete-content.js";
 import "./style.css";
 
@@ -12,6 +13,8 @@ let navLinks = document.querySelectorAll("button");
 let homepageLink = navLinks[0];
 let menuLink = navLinks[1];
 let aboutUsLink = navLinks[2];
+
+const head = document.getElementById("grab");
 
 homepageLink.addEventListener("click", () => {
   deleteContent();
@@ -28,5 +31,9 @@ menuLink.addEventListener("click", () => {
 });
 
 aboutUsLink.addEventListener("click", () => {
+  deleteContent();
+  let aboutPage = compileAbout();
+  head.appendChild(aboutPage);
+  head.appendChild(createFooter());
   console.log("about");
 });

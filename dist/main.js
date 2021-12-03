@@ -123,7 +123,7 @@ function cardMaker(name, price, clas, image) {
   return card;
 }
 
-function createMenu() {
+function compileMenu() {
   const content = document.createElement("div");
   content.id = "big-content";
   const menuPage = document.createElement("div");
@@ -141,12 +141,6 @@ function createMenu() {
   menuPage.appendChild(cardPizza);
   menuPage.appendChild(cardAlcohol);
   menuPage.appendChild(cardCoffee);
-  return content;
-}
-
-function compileMenu() {
-  const content = document.createElement("div");
-  content.appendChild(createMenu());
   return content;
 }
 
@@ -195,12 +189,21 @@ module.exports = __webpack_require__.p + "c8dba564857a695be30f.png";
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "deleteAllContent": () => (/* binding */ deleteAllContent)
+/* harmony export */   "compileAbout": () => (/* binding */ compileAbout)
 /* harmony export */ });
-function deleteAllContent(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
+function createAbout() {
+  const content = document.createElement("div");
+  content.id = "big-content";
+  const info = document.createElement("div");
+  info.classList.add("about-info");
+
+  content.appendChild(info);
+  return content;
+}
+
+function compileAbout() {
+  const content = createAbout();
+  return content;
 }
 
 
@@ -212,21 +215,38 @@ function deleteAllContent(parent) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "deleteContent": () => (/* binding */ deleteContent)
+/* harmony export */ });
+function deleteContent() {
+  const bigContent = document.getElementById("big-content");
+  const foot = document.querySelector(".footer");
+  bigContent.remove();
+  foot.remove();
+}
+
+
+
+/***/ }),
+/* 12 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(15);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(16);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(17);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(18);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(18);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
 
       
       
@@ -257,7 +277,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ ((module) => {
 
 
@@ -366,7 +386,7 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ ((module) => {
 
 
@@ -441,7 +461,7 @@ function domAPI(options) {
 module.exports = domAPI;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ ((module) => {
 
 
@@ -485,7 +505,7 @@ function insertBySelector(insert, style) {
 module.exports = insertBySelector;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
@@ -502,7 +522,7 @@ function setAttributesWithoutAttributes(styleElement) {
 module.exports = setAttributesWithoutAttributes;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ ((module) => {
 
 
@@ -518,7 +538,7 @@ function insertStyleElement(options) {
 module.exports = insertStyleElement;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ ((module) => {
 
 
@@ -539,24 +559,24 @@ function styleTagTransform(css, styleElement) {
 module.exports = styleTagTransform;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(22), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(23), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
@@ -566,7 +586,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  bo
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ ((module) => {
 
 
@@ -576,7 +596,7 @@ module.exports = function (i) {
 };
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ ((module) => {
 
 
@@ -683,7 +703,7 @@ module.exports = function (cssWithMappingToString) {
 };
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ ((module) => {
 
 
@@ -717,7 +737,7 @@ module.exports = function (url, options) {
 };
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "95e334bb3f6ae9008ff2.jpeg";
@@ -831,8 +851,10 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _homepage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _delete_content_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
+/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
+/* harmony import */ var _delete_content_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(12);
+
 
 
 
@@ -848,33 +870,27 @@ let homepageLink = navLinks[0];
 let menuLink = navLinks[1];
 let aboutUsLink = navLinks[2];
 
+const head = document.getElementById("grab");
+
 homepageLink.addEventListener("click", () => {
-  const bigContent = document.getElementById("big-content");
-  const foot = document.querySelector(".footer");
-  const head = document.getElementById("grab");
-  bigContent.remove();
-  foot.remove();
+  (0,_delete_content_js__WEBPACK_IMPORTED_MODULE_3__.deleteContent)();
   let homepage = (0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createBigContent)();
   head.appendChild(homepage);
   head.appendChild((0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
-  console.log("home");
-  console.log(bigContent);
-  console.log(head);
 });
 
 menuLink.addEventListener("click", () => {
-  const bigContent = document.getElementById("big-content");
-  const foot = document.querySelector(".footer");
-  const head = document.getElementById("grab");
-  bigContent.remove();
-  foot.remove();
+  (0,_delete_content_js__WEBPACK_IMPORTED_MODULE_3__.deleteContent)();
   let menuPage = (0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.compileMenu)();
   head.appendChild(menuPage);
   head.appendChild((0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
-  console.log("menu");
 });
 
 aboutUsLink.addEventListener("click", () => {
+  (0,_delete_content_js__WEBPACK_IMPORTED_MODULE_3__.deleteContent)();
+  let aboutPage = (0,_about_js__WEBPACK_IMPORTED_MODULE_2__.compileAbout)();
+  head.appendChild(aboutPage);
+  head.appendChild((0,_homepage_js__WEBPACK_IMPORTED_MODULE_0__.createFooter)());
   console.log("about");
 });
 
