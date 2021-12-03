@@ -196,7 +196,11 @@ function createAbout() {
   content.id = "big-content";
   const info = document.createElement("div");
   info.classList.add("about-info");
-
+  const para = document.createElement("para");
+  para.innerHTML =
+    "We come from a long line of hard workers who work hard only for you!  Good food too!  Greasy!";
+  para.classList.add("para-ab");
+  info.appendChild(para);
   content.appendChild(info);
   return content;
 }
@@ -580,7 +584,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  overflow: scroll;\n  overflow-x: hidden;\n}\n\n#content {\n  height: 100%;\n}\n\n#header {\n  height: 15vh;\n  background-color: #04030f;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.title {\n  font-size: 48px;\n  font-family: monospace;\n  margin-left: 100px;\n  margin-right: 100px;\n}\n\n.nav_links {\n}\n\nbutton {\n  height: 25px;\n  width: 60px;\n  border-radius: 10%;\n  background-color: #e7e393;\n}\n\nbutton:hover {\n  transform: scale(1.2);\n}\n\n#big-content {\n  height: 70vh;\n  background-color: #04030f;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.content1 {\n  height: 100%;\n  width: 100%;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-color: #04030f;\n}\n\n.footer {\n  height: 15vh;\n  font-family: fantasy;\n  background-color: #04030f;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.menu-page {\n  height: 500px;\n  width: 700px;\n  background-color: #e8e8e9;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n}\n\n#card {\n  height: 200px;\n  width: 200px;\n  padding: 10px;\n  background-color: #fbfbfb;\n  border-radius: 10px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.food {\n  margin-top: 25px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  overflow: scroll;\n  overflow-x: hidden;\n}\n\n#content {\n  height: 100%;\n}\n\n#header {\n  height: 15vh;\n  background-color: #04030f;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.title {\n  font-size: 48px;\n  font-family: monospace;\n  margin-left: 100px;\n  margin-right: 100px;\n}\n\n.nav_links {\n}\n\nbutton {\n  height: 25px;\n  width: 60px;\n  border-radius: 10%;\n  background-color: #e7e393;\n}\n\nbutton:hover {\n  transform: scale(1.2);\n}\n\n#big-content {\n  height: 70vh;\n  background-color: #04030f;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.content1 {\n  height: 100%;\n  width: 100%;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-color: #04030f;\n}\n\n.footer {\n  height: 15vh;\n  font-family: fantasy;\n  background-color: #04030f;\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.menu-page {\n  height: 500px;\n  width: 700px;\n  background-color: #e8e8e9;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n}\n\n#card {\n  height: 200px;\n  width: 200px;\n  padding: 10px;\n  background-color: #fbfbfb;\n  border-radius: 10px;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.food {\n  margin-top: 25px;\n}\n\n.about-info {\n  height: 500px;\n  width: 700px;\n}\n\n.para-ab {\n  font-size: 36px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
