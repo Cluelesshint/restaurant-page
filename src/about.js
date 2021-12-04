@@ -9,6 +9,8 @@ function createAbout() {
   para.classList.add("para-ab");
   info.appendChild(para);
   content.appendChild(info);
+
+  let hey = "hey";
   return content;
 }
 
